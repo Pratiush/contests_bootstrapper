@@ -3,6 +3,7 @@
 
 # Maximum number of digits in 
 # output 
+import sys
 MAX=100000
 
 # This function multiplies x 
@@ -67,13 +68,14 @@ def power(x,n):
 		res_size = multiply(x, res, res_size) 
 
 	print(x , "^" , n , " = ",end="") 
+	result=""
 	for i in range(res_size - 1, -1, -1): 
-		print(res[i], end="") 
+		result=result+str(res[i])
+	return result
 
 
 if __name__=='__main__':
     exponent = 100
     base = 9
-    power(base, exponent) 
-
-
+    p=power(base, exponent)
+    print(p)
